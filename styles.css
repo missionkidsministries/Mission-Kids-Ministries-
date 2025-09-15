@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    margin:0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Info Section */
+.info {
+    text-align: center;
+}
+
+/* Donation Box */
+.donate-box {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 0 10px;
+}
+
+.donate-box {
+    text-align: center;
+    margin-bottom: 0;
+    
+}
+
+.donate-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.donate-btn:hover {
+    background: #45a049;
+}
+
+/* Scroll Gallery */
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slide {
+  flex: 0 0 auto;              /* prevent shrinking */
+  width: 300px;                /* scaled width on page */
+  height: 400px;               /* scaled height on page */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 1200px;               /* original image width */
+  height: 1600px;              /* original image height */
+  max-width: 100%;             /* scale down to fit container */
+  max-height: 100%;            /* scale down proportionally */
+  object-fit: cover;           /* crop if needed to fill container */
+  display: block;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+    
+    .donate-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .info p {
+    font-size: 15px;
+  }
+}
